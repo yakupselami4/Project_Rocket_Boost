@@ -20,16 +20,14 @@ public class Rocket : MonoBehaviour
     void ProcessInput(){
         if(Input.GetKey(KeyCode.Space)){
             rigidBody.AddRelativeForce(Vector3.up);
-            
         }
-
         if (Input.GetKey(KeyCode.A))
         {
-            rigidBody.AddRelativeForce(Vector3.left);
+            transform.Rotate(Vector3.forward);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rigidBody.AddRelativeForce(Vector3.right);
+            transform.Rotate(-Vector3.forward);
         }
         }
 }
